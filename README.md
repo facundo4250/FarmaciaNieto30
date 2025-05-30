@@ -7,13 +7,6 @@
     <meta name="description" content="Farmacia especializada en elaboración magistral personalizada. Medicina ortomolecular, dermocosmética, homeopatía y más. Atención personalizada desde 1996.">
     <meta name="keywords" content="farmacia, medicamentos magistrales, homeopatía, dermocosmética, probióticos, medicina ortomolecular">
     
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://farmacia-nieto.com/">
-    <meta property="og:title" content="Farmacia Nieto - Tu camino hacia el bienestar">
-    <meta property="og:description" content="Elaboración magistral personalizada con 28 años de experiencia. Cuidamos de ti de manera personalizada.">
-    
-    <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
@@ -29,7 +22,6 @@
             --off-white: #fafafa;
             --shadow-light: rgba(134, 164, 134, 0.12);
             --shadow-medium: rgba(134, 164, 134, 0.22);
-            --shadow-luxury: rgba(45, 74, 45, 0.15);
             --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             --border-radius: 20px;
         }
@@ -52,7 +44,6 @@
             background: var(--off-white);
         }
 
-        /* Loading Screen */
         .loading-screen {
             position: fixed;
             top: 0;
@@ -87,7 +78,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -207,7 +197,6 @@
             box-shadow: 0 10px 28px var(--shadow-medium);
         }
 
-        /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #f8fcf8 0%, var(--accent-color) 100%);
             padding: 125px 5% 85px;
@@ -340,14 +329,11 @@
             box-shadow: 0 12px 30px var(--shadow-medium);
         }
 
-        /* Professional Highlight Card */
         .professional-highlight {
             background: linear-gradient(145deg, var(--white) 0%, #f9faf9 100%);
             border-radius: 28px;
             padding: 45px 40px;
-            box-shadow: 
-                0 28px 65px var(--shadow-light),
-                0 8px 25px rgba(134, 164, 134, 0.08);
+            box-shadow: 0 28px 65px var(--shadow-light), 0 8px 25px rgba(134, 164, 134, 0.08);
             text-align: center;
             max-width: 620px;
             margin: 70px auto 0;
@@ -371,9 +357,7 @@
 
         .professional-highlight:hover {
             transform: translateY(-6px) scale(1.02);
-            box-shadow: 
-                0 35px 80px var(--shadow-medium),
-                0 15px 35px rgba(134, 164, 134, 0.15);
+            box-shadow: 0 35px 80px var(--shadow-medium), 0 15px 35px rgba(134, 164, 134, 0.15);
         }
 
         @keyframes slideInUp {
@@ -467,7 +451,6 @@
             gap: 8px;
         }
 
-        /* Services Section */
         .services {
             padding: 80px 5%;
             background: white;
@@ -564,7 +547,6 @@
             transform: scale(1.1) rotate(5deg);
         }
 
-        /* Testimonials Section */
         .testimonials {
             padding: 80px 5%;
             background: linear-gradient(135deg, var(--accent-color), var(--white));
@@ -605,7 +587,6 @@
             margin-bottom: 15px;
         }
 
-        /* About Section */
         .about {
             padding: 80px 5%;
             background: linear-gradient(135deg, #f8fcf8 0%, var(--accent-color) 100%);
@@ -656,7 +637,6 @@
             margin-top: 8px;
         }
 
-        /* Contact Section */
         .contact {
             padding: 80px 5%;
             background: var(--primary-dark);
@@ -720,7 +700,6 @@
             box-shadow: 0 0 20px rgba(155, 180, 155, 0.3);
         }
 
-        /* Footer Styles */
         .footer {
             background: var(--primary-dark);
             color: white;
@@ -773,7 +752,6 @@
             opacity: 0.8;
         }
 
-        /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -805,7 +783,6 @@
             box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
         }
 
-        /* Back to Top Button */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -834,7 +811,6 @@
             transform: translateY(-3px);
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .mobile-menu-btn {
                 display: block;
@@ -894,7 +870,6 @@
             }
         }
 
-        /* Accessibility Improvements */
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -915,7 +890,6 @@
             border: 0;
         }
 
-        /* Focus styles for accessibility */
         button:focus,
         input:focus,
         textarea:focus,
@@ -926,7 +900,6 @@
     </style>
 </head>
 <body>
-    <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
         <div class="loader"></div>
     </div>
@@ -1293,7 +1266,6 @@
         </div>
     </footer>
 
-    <!-- Floating Action Buttons -->
     <a href="#" class="whatsapp-float" onclick="openWhatsApp()" aria-label="Contactar por WhatsApp">
         💬
     </a>
@@ -1303,25 +1275,21 @@
     </button>
 
     <script>
-        // Variables globales
         let currentTestimonial = 0;
         const testimonials = ['testimonial1', 'testimonial2', 'testimonial3'];
         
-        // Loading Screen
         window.addEventListener('load', function() {
             setTimeout(() => {
                 document.getElementById('loadingScreen').classList.add('hidden');
             }, 1000);
         });
 
-        // Mobile Menu
         document.getElementById('mobileMenuBtn').addEventListener('click', function() {
             const navMenu = document.getElementById('navMenu');
             navMenu.classList.toggle('active');
             this.innerHTML = navMenu.classList.contains('active') ? '✕' : '☰';
         });
 
-        // Header Scroll Effect
         window.addEventListener('scroll', function() {
             const header = document.getElementById('header');
             const backToTop = document.getElementById('backToTop');
@@ -1335,7 +1303,6 @@
             }
         });
 
-        // Smooth Scrolling and Active Navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -1346,7 +1313,6 @@
                         block: 'start'
                     });
                     
-                    // Close mobile menu if open
                     const navMenu = document.getElementById('navMenu');
                     const menuBtn = document.getElementById('mobileMenuBtn');
                     navMenu.classList.remove('active');
@@ -1355,7 +1321,6 @@
             });
         });
 
-        // Active Navigation Highlighting
         window.addEventListener('scroll', function() {
             const sections = document.querySelectorAll('section[id]');
             const navItems = document.querySelectorAll('.nav-item');
@@ -1377,7 +1342,6 @@
             });
         });
 
-        // Testimonials Slider
         function showTestimonial(index) {
             testimonials.forEach((id, i) => {
                 const testimonial = document.getElementById(id);
@@ -1396,10 +1360,8 @@
             showTestimonial(currentTestimonial);
         }
 
-        // Auto-rotate testimonials
         setInterval(nextTestimonial, 5000);
 
-        // Animated Counters
         function animateCounters() {
             const counters = document.querySelectorAll('.stat-number');
             counters.forEach(counter => {
@@ -1418,7 +1380,6 @@
             });
         }
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1437,19 +1398,16 @@
             });
         }, observerOptions);
 
-        // Observe elements for animation
         document.querySelectorAll('.service-card, .stat-item').forEach(el => {
             observer.observe(el);
         });
 
-        // WhatsApp Function
         function openWhatsApp() {
             const message = "Hola, me gustaría obtener información sobre sus servicios farmacéuticos. ¡Gracias!";
             const whatsappURL = `https://wa.me/5492914327031?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, '_blank');
         }
 
-        // Contact Form
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1473,12 +1431,10 @@
             const whatsappURL = `https://wa.me/5492914327031?text=${encodeURIComponent(mensaje)}`;
             window.open(whatsappURL, '_blank');
             
-            // Show success message
             alert('¡Gracias por tu consulta! Te redirigimos a WhatsApp para una respuesta rápida.');
             this.reset();
         });
 
-        // Back to Top Function
         function scrollToTop() {
             window.scrollTo({
                 top: 0,
@@ -1486,7 +1442,6 @@
             });
         }
 
-        // Service Card Hover Effects
         document.querySelectorAll('.service-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
@@ -1497,7 +1452,6 @@
             });
         });
 
-        // Keyboard Navigation
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 const navMenu = document.getElementById('navMenu');
@@ -1507,20 +1461,12 @@
             }
         });
 
-        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             console.log('⚕️ Farmacia Nieto - Sitio web cargado correctamente');
             console.log('📱 WhatsApp: +54 291432-7031');
             console.log('✉️ Email: farmacia.nieto@hotmail.com');
             console.log('📍 Ubicación: Bahía Blanca, Buenos Aires, Argentina');
         });
-
-        // Performance Optimization
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                // Service worker registration would go here for PWA functionality
-            });
-        }
     </script>
 </body>
 </html>
